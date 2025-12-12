@@ -1,16 +1,12 @@
 import { Sequelize } from "sequelize";
 import pg from "pg";
 
-const postgres = new Sequelize(
-    {
-        dialect: 'postgres',
-        dialectModule: pg, 
-        host: 'dpg-d4tmaaumcj7s7382h8sg-a',
-        port: 5432, 
-        database: 'a_t0t4',
-        username: 'as',
-        password: 'HMWzLvTKs3MSlpTFE41PZ2jPGRD3RzIG',
-    }
-);
+const EXTERNAL_DATABASE_URL = 'postgresql://as:HMWzLvTKs3MSlpTFE41PZ2jPGRD3RzIG@dpg-d4tmaaumcj7s7382h8sg-a.oregon-postgres.render.com/a_t0t4'; 
+
+const postgres = new Sequelize(EXTERNAL_DATABASE_URL, {
+    dialect: 'postgres',
+    dialectModule: pg,
+
+});
 
 export default postgres;
