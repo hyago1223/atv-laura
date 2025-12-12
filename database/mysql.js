@@ -1,16 +1,16 @@
 import { Sequelize } from "sequelize";
-import mysql2 from "mysql2";
+import pg from "pg";
 
-const mysql = new Sequelize(
+const postgres = new Sequelize(
     {
-        dialect: 'mysql',
-        dialectModule: mysql2,
-        host: 'localhost',
-        port: '3306',
-        database: 'site_bebidas',
-        username: 'root',
-        password: 'root',
+        dialect: 'postgres',
+        dialectModule: pg, // Módulo 'pg' importado para o dialecto postgres
+        host: 'dpg-d4tm2n1r0fns738281rg-a',
+        port: '5432', // Porta padrão do PostgreSQL
+        database: 'laura_ran8',
+        username: 'laura_ran8_user',
+        password: 'DdcCv2v0HeAAvpQTznmNJ0Wn6qykhwOY',
     }
 );
 
-export default mysql;
+export default postgres;

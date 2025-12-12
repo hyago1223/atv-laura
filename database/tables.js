@@ -7,40 +7,54 @@ const Produto = mysql.define('Produto', {
     teor: DataTypes.STRING(4),
     descricao: DataTypes.STRING
 
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 const Categoria = mysql.define('Categoria', {
     nome: DataTypes.STRING
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 const Cliente = mysql.define('Cliente', {
     nome: DataTypes.STRING,
     email: DataTypes.STRING,
     senha: DataTypes.STRING
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 
 const Venda = mysql.define('Venda', {
     ValorTotal: DataTypes.DECIMAL(10,2),
     DataVenda: DataTypes.DATEONLY
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 
 const Compra = mysql.define('Compra', {
     valor: DataTypes.DECIMAL(10,2),
     data: DataTypes.DATEONLY
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 const ItemCompra = mysql.define('ItemCompra', {
     PrecoUni: DataTypes.DECIMAL(10,2),
     SubTot: DataTypes.DECIMAL(10,2),
     quantidade: DataTypes.INTEGER
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 const ItemVenda = mysql.define('ItemVenda', {
     SubTot: DataTypes.DECIMAL(10,2),
     quantidade: DataTypes.INTEGER
-});
+},
+  { timestamps: true, freezeTableName: true }
+);
 
 
 // RELACIONAMENTOS
@@ -76,8 +90,6 @@ Produto.hasMany(ItemCompra);
 ItemCompra.belongsTo(Produto);
 
 // Sincronizar com o banco
-
-await mysql.sync();
 
 export {
     Categoria, Cliente, Compra,
