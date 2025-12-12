@@ -6,7 +6,7 @@ import postgres from "./postgres.js"; // Assumindo que seu novo arquivo se chama
 // no banco (ex: "Produto") sejam exatamente como o Sequelize espera, ou 
 // defina tableName: 'produto' em cada modelo (Solução 1 da resposta anterior).
 
-const Produto = postgres.define('Produto', { // 2. Usar a variável de conexão PostgreSQL
+const Produto = postgres.define("Produto", { // 2. Usar a variável de conexão PostgreSQL
     nome: DataTypes.STRING,
     preco: DataTypes.DECIMAL(10,2),
     teor: DataTypes.STRING(4),
@@ -16,13 +16,13 @@ const Produto = postgres.define('Produto', { // 2. Usar a variável de conexão 
     { timestamps: true, freezeTableName: true }
 );
 
-const Categoria = postgres.define('Categoria', {
+const Categoria = postgres.define("Categoria", {
     nome: DataTypes.STRING
 },
     { timestamps: true, freezeTableName: true }
 );
 
-const Cliente = postgres.define('Cliente', {
+const Cliente = postgres.define("Cliente", {
     nome: DataTypes.STRING,
     email: DataTypes.STRING,
     senha: DataTypes.STRING
@@ -31,7 +31,7 @@ const Cliente = postgres.define('Cliente', {
 );
 
 
-const Venda = postgres.define('Venda', {
+const Venda = postgres.define("Venda", {
     ValorTotal: DataTypes.DECIMAL(10,2),
     DataVenda: DataTypes.DATEONLY
 },
@@ -39,14 +39,14 @@ const Venda = postgres.define('Venda', {
 );
 
 
-const Compra = postgres.define('Compra', {
+const Compra = postgres.define("Compra", {
     valor: DataTypes.DECIMAL(10,2),
     data: DataTypes.DATEONLY
 },
     { timestamps: true, freezeTableName: true }
 );
 
-const ItemCompra = postgres.define('ItemCompra', {
+const ItemCompra = postgres.define("ItemCompra", {
     PrecoUni: DataTypes.DECIMAL(10,2),
     SubTot: DataTypes.DECIMAL(10,2),
     quantidade: DataTypes.INTEGER
@@ -54,7 +54,7 @@ const ItemCompra = postgres.define('ItemCompra', {
     { timestamps: true, freezeTableName: true }
 );
 
-const ItemVenda = postgres.define('ItemVenda', {
+const ItemVenda = postgres.define("ItemVenda", {
     SubTot: DataTypes.DECIMAL(10,2),
     quantidade: DataTypes.INTEGER
 },
