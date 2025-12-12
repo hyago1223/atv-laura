@@ -5,11 +5,11 @@ const postgres = new Sequelize(
     {
         dialect: 'postgres',
         dialectModule: pg, 
-        host: 'dpg-d4tm2n1r0fns738281rg-a',
+        host: 'dpg-d4tmaaumcj7s7382h8sg-a',
         port: 5432, 
-        database: 'laura_ran8',
-        username: 'laura_ran8_user',
-        password: 'DdcCv2v0HeAAvpQTznmNJ0Wn6qykhwOY',
+        database: 'a_t0t4',
+        username: 'as',
+        password: 'HMWzLvTKs3MSlpTFE41PZ2jPGRD3RzIG',
     }
 );
 
