@@ -1,0 +1,37 @@
+main{
+    padding: 40px;
+    div{
+        width: 80%;
+        margin: auto;
+        h1{
+            margin: 15px;
+        }
+        table{
+            width: 100%;
+            border: 0.5px solid gray;
+            border-collapse: collapse;
+            td, th{
+                padding: 5px;
+                border: 1.3px solid gray;
+                text-align: center;
+                color: black;
+            }
+            td:last-child{
+                display: flex;
+                justify-content: center;
+                button{
+                    margin: 2px;
+                    padding: 5px;
+                    border: 0.2px solid rgb(203, 36, 36);
+                    border-radius: 0.2px;
+                    text-shadow: none;
+                }
+                button:hover{
+                    background: rgb(172, 30, 30);
+                    transition: transform 1s;
+                    color: white;
+                }
+            }
+        }
+    }
+}
